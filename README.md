@@ -87,6 +87,7 @@ curl -X POST http://localhost:3000/api/webhooks/servicenow \
 | `/api/jira` | GET | List Jira tasks |
 | `/api/jira/[id]` | GET | Get single Jira task |
 | `/api/jira/[id]/stream` | GET | SSE progress stream |
+| `/api/jira/[id]/copilot-pr` | POST | Prepare Copilot PR data |
 | `/api/webhooks/splunk` | POST | Splunk webhook |
 | `/api/webhooks/servicenow` | POST | ServiceNow webhook |
 
@@ -114,7 +115,7 @@ Web UI / Webhooks --> BullMQ Queue (Redis) --> Worker
                                      Redis Pub/Sub --> SSE
 ```
 
-- **Next.js 15** - Web UI + API routes
+- **Next.js 16** - Web UI + API routes
 - **BullMQ + Redis** - Job queue for async processing
 - **SQLite + Drizzle ORM** - Persistent storage
 - **Claude CLI** (`claude -p`) - Headless error analysis
@@ -122,4 +123,4 @@ Web UI / Webhooks --> BullMQ Queue (Redis) --> Worker
 
 ## Tech Stack
 
-TypeScript, Next.js 15 (App Router), Tailwind CSS v4, SQLite (better-sqlite3), Drizzle ORM, BullMQ, Redis, simple-git
+TypeScript, Next.js 16 (App Router), Tailwind CSS v4, SQLite (better-sqlite3), Drizzle ORM, BullMQ, Redis, simple-git

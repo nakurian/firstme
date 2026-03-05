@@ -97,8 +97,6 @@ src/
       jira-prompt-builder.ts        # Jira ticket prompt (instructs Copilot to use Atlassian MCP)
       result-parser.ts              # Parse Claude JSON output with Zod
       jira-result-parser.ts         # Parse Copilot JSON output with Zod
-    integrations/
-      github-pr.ts                  # PR creation (placeholder for Phase 6)
     types/
       analysis.ts                   # Analysis types + Zod schemas
       webhook.ts                    # Webhook payload types
